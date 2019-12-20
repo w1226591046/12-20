@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            统一的遍历api
+            for of
+
+            一个数据只要部署了Symbol.iterator属性，
+            就被视为具有iterator接口，就可以用for...of循环遍历它的成员
+            也就是说，for...of循环内部调用的是数据结构的Symbol.iterator方法。
+
+            要遍历key ->  ary.keys()
+            要遍历value -> ary.values()
+            都要遍历 -> ary.entries()
+        
+            字符串，数组，Map，Set,querySelectorAll都有Symbol.iterator
+        */
+         /*
+        Iterator 的作用有三个：一是为各种数据结构，提供一个统一的、简便的访问接口；二是使得数据结构的成员能够按某种次序排列；三是 ES6 创造了一种新的遍历命令for...of循环，Iterator 接口主要供for...of消费。
+    */
+    let ary = [1,2,3]
+    console.dir(ary)
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function* fn(){
+        //     console.log(3);
+        //     yield 'hi';
+        //     console.log(2);
+        //     return 10;
+        // }
+        // let m = fn();
+        // console.log(m.next())
+        // console.log(m.next())
+        // console.log(m.next());
+        // function* fn(){
+        //     console.log(1);
+        //     let n = yield;
+        //     console.log(n);
+        //     console.log(4)
+        // };
+        // let g = fn();
+        // g.next();
+        // setTimeout(()=>{
+        //     g.next(5)
+        // },1000)
+        function* n(g1,g2){
+            yield* g2();
+            yield* g1();
+        }
+        let dd = n(function* a(){
+            yield 1;
+        },function* b(){
+            yield 2;
+        })
+        console.log(dd)
+        for(let i of dd){
+            console.log(i)
+        }
+        function* aa(){
+            this.a = 2;
+        };
+        let ab= aa();
+       ab.next()
+       console.log(window.a)
+    </script>
+</body>
+</html>
